@@ -47,6 +47,7 @@ public class GameBehavior : MonoBehaviour
     public void GameOverReset()
     {
         Time.timeScale = 0f;
+        BulletBehavior.Instance.DestroyBullet();
     }
     private void Update()
     {

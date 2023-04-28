@@ -1,4 +1,13 @@
 # MittMattV2
+## 04272023 3 hours
+- models imported and placed
+- Animation and animation controller included
+- collisions included
+- emission material created
+- Started tile spawn
+### ideas
+    - have material switch with jump pad tigger
+    - have sliders set up seperate spawns for longer vs square
 ## 04242023 4pm
 - added timer
 - added FPS unity starter Asset

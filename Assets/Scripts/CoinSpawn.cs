@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class CoinSpawn : MonoBehaviour
 {
+    public static CoinSpawn Instance;
     public GameObject objectToInstantiate;
     public float spawnDelay = 1.0f;
+    public int count = 0;
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("spawn");
+        //Debug.Log("spawn");
         // Instantiate the objectToInstantiate after a collision
-        Invoke("SpawnObject", spawnDelay);
+        if (count == 0)
+        {
+            Invoke("SpawnObject", spawnDelay);
+            count++;
 
+        }
+
+       
     }
 
     void SpawnObject()

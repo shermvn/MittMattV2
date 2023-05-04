@@ -95,6 +95,8 @@ GameObject:
   - component: {fileID: 4609763435690972849}
   - component: {fileID: 8679984253309949303}
   - component: {fileID: 1142676429807365026}
+  - component: {fileID: 7127113365914261583}
+  - component: {fileID: -7291992579721742696}
   m_Layer: 0
   m_Name: coinz
   m_TagString: Coin
@@ -144,6 +146,42 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: -1.72, y: 1.42, z: 1.8}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &7127113365914261583
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797374269156068363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7df666b4f98f4f5bb2d142fb1c271d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!111 &-7291992579721742696
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797374269156068363}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 67c4220d644964e3f980930f6cf7ac31, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 67c4220d644964e3f980930f6cf7ac31, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &7405549792282812952
 GameObject:
   m_ObjectHideFlags: 0

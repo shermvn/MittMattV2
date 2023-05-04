@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static PlayerBehavior Instance;
+    private bool hasJumped = false;
+        private Rigidbody rb;
+        public float jumpForce;
+
+    private void Awake()
     {
-        
+
+        // Singleton pattern
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+        void Start()
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+
+
+       public void ArcadeButton() { 
+                // Jump when first collision occurs
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                hasJumped = true;
+       }
+       
+ }

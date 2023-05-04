@@ -1,4 +1,13 @@
 # MittMattV2
+## 04292023 6 hours
+- got sizing of tiles right
+- made coin
+- tried to implement
+    - arcade button hop? 
+- coin disappear implemented
+- need to rexport all models with correct locations
+    - all but mod wheel
+
 ## 04272023 3 hours
 - models imported and placed
 - Animation and animation controller included

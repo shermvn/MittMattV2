@@ -28,11 +28,9 @@ public class PlayerBehavior : MonoBehaviour
             rb = GetComponent<Rigidbody>();
         }
 
+   
+    }
 
-       public void ArcadeButton() { 
-                // Jump when first collision occurs
-                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-                hasJumped = true;
-       }
-       
- }
+
+
+

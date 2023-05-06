@@ -6,7 +6,7 @@ public class BasicAnimBehavior : MonoBehaviour
 {
     private Animator anim;
     private static BasicAnimBehavior Instance;
-    private bool hasTriggered = false;
+    //private bool hasTriggered = false;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -32,17 +32,19 @@ public class BasicAnimBehavior : MonoBehaviour
     {
         
     }
-  
-    private void OnTriggerEnter(Collider other)
+
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && !hasTriggered)
+        
+
+        if (other.gameObject.CompareTag("Player"))
         {
             // code to execute when collision occurs for the first time
+            //Debug.Log("move");
             anim.SetBool("isIdle", false);
             anim.SetBool("isMove", true);
-            Debug.Log("button");
-            PlayerBehavior.Instance.ArcadeButton();
-            hasTriggered = true;
+
+            //hasTriggered = true;
         }
     }
 }

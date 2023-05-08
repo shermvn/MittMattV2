@@ -5,13 +5,21 @@ using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
+    [SerializeField] private HealthBarBehavior _healthbar;
+    private float _currentHealth;
+    private float maxHealth = 100;
+
     public NavMeshAgent agent;
 
-    public Transform player;
+    private Transform player;
+
+    
 
     public GameObject projectile;
 
-    public float health; 
+
+    public static EnemyBehavior Instance;
+
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -31,8 +39,23 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("PlayerCapsule").transform;
+        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        // Singleton pattern
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
+    }
+    private void Start()
+    {
+        _currentHealth = maxHealth;
+        _healthbar.updateHealthBar(maxHealth, _currentHealth);
 
     }
 
@@ -95,7 +118,7 @@ public class EnemyBehavior : MonoBehaviour
             //Attack code
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 1f, ForceMode.Impulse);
 
 
 
@@ -114,9 +137,12 @@ public class EnemyBehavior : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        _currentHealth -= damage;
+        //Debug.Log(_currentHealth);
+        _healthbar.updateHealthBar(maxHealth, _currentHealth);
 
-        if(health <= 0)
+
+        if (_currentHealth <= 0)
         {
             Invoke(nameof(DestroyEnemy), 0.5f);
         }

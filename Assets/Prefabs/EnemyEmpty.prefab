@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 852918113579483877}
   - component: {fileID: 3184849541571950127}
   - component: {fileID: 3959730012069481280}
+  - component: {fileID: 279156731908786525}
   m_Layer: 6
   m_Name: EnemyEmpty
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3977285094344333306}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.31559, y: -6.6630235, z: -1.1640692}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -97,3 +98,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 5.4, z: 10}
   m_Center: {x: 0, y: 0.19850302, z: 0}
+--- !u!114 &279156731908786525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3977285094344333306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36e7f128be884ebc85cdcbe8e70a720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 1605792564429072826, guid: 7f6ce0ecf2293491892be07f1b4525d3, type: 3}

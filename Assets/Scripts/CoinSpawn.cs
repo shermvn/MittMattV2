@@ -9,18 +9,14 @@ public class CoinSpawn : MonoBehaviour
     public float spawnDelay = 1.0f;
     public int count = 0;
 
-    void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        //Debug.Log("spawn");
-        // Instantiate the objectToInstantiate after a collision
         if (count == 0)
         {
             Invoke("SpawnObject", spawnDelay);
             count++;
 
         }
-
-       
     }
 
     void SpawnObject()

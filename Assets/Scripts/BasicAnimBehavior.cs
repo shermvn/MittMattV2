@@ -37,12 +37,13 @@ public class BasicAnimBehavior : MonoBehaviour
     {
         
 
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.Space))
         {
             // code to execute when collision occurs for the first time
             //Debug.Log("move");
             anim.SetBool("isIdle", false);
             anim.SetBool("isMove", true);
+            
 
             //hasTriggered = true;
         }

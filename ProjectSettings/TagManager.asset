@@ -9,6 +9,10 @@ TagManager:
   - Coin
   - Button
   - Ground
+  - Bullet
+  - EnBullet
+  - Pizza
+  - Fader
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,9 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
-		public static FirstPersonController Instance;
+        Vector3 initialPosition = new Vector3(0f, 0f, 0f);
+
+        public static FirstPersonController Instance;
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
@@ -140,7 +142,14 @@ namespace StarterAssets
 			// set sphere position, with offset
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
-		}
+			//if (GameBehavior.Instance.CurrentState == State.GameOver)
+			//{
+			//	Grounded = true;
+   //             this.transform.position = initialPosition;
+
+
+   //         }
+        }
 
 		private void CameraRotation()
 		{

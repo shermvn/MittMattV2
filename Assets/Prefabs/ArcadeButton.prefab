@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1692864699279077537}
   - component: {fileID: 7405744506855857640}
   - component: {fileID: 8243478517779358321}
+  - component: {fileID: 71683685}
   m_Layer: 6
   m_Name: Arcade Button.001
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +98,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.6233387, y: 0.9720539, z: 6.6233363}
   m_Center: {x: 0, y: 3.3728664, z: 0.00000011920925}
+--- !u!65 &71683685
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253425143190920515}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 6.6233387, y: 5.83, z: 7.52}
+  m_Center: {x: 0, y: 3.3728664, z: 0.00000011920925}
 --- !u!1 &2420303436129201076
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,9 +126,10 @@ GameObject:
   - component: {fileID: 8243478518723852503}
   - component: {fileID: 5956489898920715162}
   - component: {fileID: 8243478518723852501}
+  - component: {fileID: 543450653231076152}
   m_Layer: 6
   m_Name: ArcadeButton
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +141,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2420303436129201076}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -197,8 +212,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.01, y: 9.83, z: 3.84}
-  m_Center: {x: 0, y: 0.41477263, z: 0}
+  m_Size: {x: 5.71, y: 3.44, z: 6.47}
+  m_Center: {x: 0, y: 3.06, z: 0}
 --- !u!65 &8243478518723852503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -244,6 +259,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916c839ff44694a9babe8b727d3178bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &543450653231076152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420303436129201076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 587d8a6a7b12a4328af48f5b31c4b849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5698948700168912724
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +282,7 @@ GameObject:
   - component: {fileID: 2582242450406831748}
   m_Layer: 6
   m_Name: Armature.006
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

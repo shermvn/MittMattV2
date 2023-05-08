@@ -20,7 +20,7 @@ public class ButtonBehavior : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Big Jump");
-            StarterAssets.FirstPersonController.Instance.JumpHeight = 6f;
+            StarterAssets.FirstPersonController.Instance.JumpHeight = 10f;
 
 
             //hasJumped = true;

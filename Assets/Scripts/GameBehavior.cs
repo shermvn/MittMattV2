@@ -186,7 +186,7 @@ public class GameBehavior : MonoBehaviour
         GUIBehavior.Instance.GoState(GUIBehavior.Instance.GameOverScreen);
         UIOff();
         CurrentState = State.GameOver;
-        AudioManager.Instance.PlaySound(AudioManager.Instance.Win, 0.2f);
+        AudioManager.Instance.PlaySound(AudioManager.Instance.DeathHit, 0.2f);
 
         AudioManager.Instance.Soundtrack.Stop();
         PlayerBehavior.Instance.PlayerReset();

@@ -26,6 +26,7 @@ public class WinBehavior : MonoBehaviour
         {
             GameBehavior.Instance.UIOff();
             GUIBehavior.Instance.WinScreen.SetActive(true);
+            AudioManager.Instance.PlaySound(AudioManager.Instance.Win, 0.2f);
             Time.timeScale = 0f;
             GameBehavior.Instance.CurrentState = State.Win;
         }

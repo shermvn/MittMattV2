@@ -24,6 +24,7 @@ public class WinBehavior : MonoBehaviour
         Debug.Log("Win");
         if (collision.gameObject.CompareTag("Player"))
         {
+            GameBehavior.Instance.UIOff();
             GUIBehavior.Instance.WinScreen.SetActive(true);
             Time.timeScale = 0f;
             GameBehavior.Instance.CurrentState = State.Win;

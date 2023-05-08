@@ -41,6 +41,19 @@ public class PlayerBehavior : MonoBehaviour
             GameBehavior.Instance.GoSeq();
             count++;
         }
+        if(GUIBehavior.Instance.CoinCount >= 3 && Input.GetKeyDown(KeyCode.C)){
+            TimerBehavior.Instance.timeValue += 20;
+            GUIBehavior.Instance.CoinCount -= 3;
+            AudioManager.Instance.PlaySound(AudioManager.Instance.TimeHit, 0.2f);
+
+        }
+        if (GUIBehavior.Instance.PizzaCount >= 1 && Input.GetKeyDown(KeyCode.Z))
+        {
+            _currentPHealth = 20;
+            GUIBehavior.Instance.PizzaCount -= 1;
+            AudioManager.Instance.PlaySound(AudioManager.Instance.HealHit, 0.2f);
+
+        }
     }
 
     public void PlayerReset()

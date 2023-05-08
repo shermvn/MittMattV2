@@ -28,7 +28,8 @@ public class WeaponBehavior : MonoBehaviour
     {
         //instantiate bullet
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
-       // shoot bullet
+        AudioManager.Instance.PlaySound(AudioManager.Instance.ShootHit, 0.2f);
+        // shoot bullet
         bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward.normalized * bulletVelocity, ForceMode.Impulse);
         //destroy bullet after time
         StartCoroutine(DestroyBulletAfterTime(bullet, bulletPrefabLifeTime));

@@ -11,7 +11,8 @@ public class GUIBehavior : MonoBehaviour
     [SerializeField] public GameObject PHB;
     [SerializeField] public GameObject Time;
     [SerializeField] public GameObject WinScreen;
-
+    public int PizzaCount;
+    public int CoinCount;
 
 
 
@@ -48,6 +49,11 @@ public class GUIBehavior : MonoBehaviour
 
 
 
+    }
+    public void resetCount()
+    {
+        PizzaCount = 0;
+        CoinCount = 0;
     }
     public void GoState(GameObject other)
     {

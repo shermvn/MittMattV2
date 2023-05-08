@@ -6,9 +6,7 @@ using TMPro;
 public class PowerUpBehavior : MonoBehaviour
 {
     private static PowerUpBehavior Instance;
-    public int PizzaCount;
-    public int CoinCount;
-   
+    
 
     //private void Awake()
     //{
@@ -30,10 +28,11 @@ public class PowerUpBehavior : MonoBehaviour
         if (other.gameObject.CompareTag("Player")&& this.gameObject.CompareTag("Coin"))
         {
             // Destroy the game object when it collides with the player
-            CoinCount++;
+            GUIBehavior.Instance.CoinCount++;
             Destroy(this.gameObject);
-            Debug.Log(CoinCount);
-            PowerCountBehavior.Instance.CoinValue(CoinCount);
+            PowerCountBehavior.Instance.CoinValue(GUIBehavior.Instance.CoinCount++);
+            AudioManager.Instance.PlaySound(AudioManager.Instance.Coin, 0.2f);
+
 
 
 
@@ -41,10 +40,12 @@ public class PowerUpBehavior : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && this.gameObject.CompareTag("Pizza"))
         {
             // Destroy the game object when it collides with the player
-            PizzaCount++;
+            GUIBehavior.Instance.PizzaCount++;
             Destroy(this.gameObject);
-            Debug.Log(PizzaCount);
-            PowerCountBehavior.Instance.PizzaValue(PizzaCount);
+            //Debug.Log(GUIBehavior.Instance.PizzaCount);
+            PowerCountBehavior.Instance.PizzaValue(GUIBehavior.Instance.PizzaCount);
+            AudioManager.Instance.PlaySound(AudioManager.Instance.Pizza, 0.2f);
+
 
         }
     }

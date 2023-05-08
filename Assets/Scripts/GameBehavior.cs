@@ -69,6 +69,7 @@ public class GameBehavior : MonoBehaviour
                 {
 
                     PlaySeq();
+                    
                     Debug.Log(CurrentState);
                     //Time.timeScale = 1f;
                     //GuiBehavior.Instance.ToggleGUIVisibility(GuiBehavior.Instance.OverGui);
@@ -185,6 +186,9 @@ public class GameBehavior : MonoBehaviour
         GUIBehavior.Instance.GoState(GUIBehavior.Instance.GameOverScreen);
         UIOff();
         CurrentState = State.GameOver;
+        AudioManager.Instance.PlaySound(AudioManager.Instance.Win, 0.2f);
+
+        AudioManager.Instance.Soundtrack.Stop();
         PlayerBehavior.Instance.PlayerReset();
         TimerBehavior.Instance.GameOverTimer();
     }
@@ -192,6 +196,8 @@ public class GameBehavior : MonoBehaviour
     {
         Time.timeScale = 0f;
         GUIBehavior.Instance.GoState(GUIBehavior.Instance.PauseScreen);
+        AudioManager.Instance.Soundtrack.Pause();
+
         UIOff();
 
         CurrentState = State.Pause;
@@ -204,6 +210,8 @@ public class GameBehavior : MonoBehaviour
         CurrentState = State.Play;
         StarterAssets.FirstPersonController.Instance.transform.position = Vector3.zero;
         PlayerBehavior.Instance.transform.position = Vector3.zero;
+        AudioManager.Instance.Soundtrack.loop = true;
+        AudioManager.Instance.Soundtrack.Play();
         GUIBehavior.Instance.UI.SetActive(true);
         GUIBehavior.Instance.PHB.SetActive(true);
         GUIBehavior.Instance.WinScreen.SetActive(false);
@@ -218,13 +226,14 @@ public class GameBehavior : MonoBehaviour
         //PlayerBehavior.Instance.PlayerReset();
         GUIBehavior.Instance.GameOverScreen.SetActive(false);
         GUIBehavior.Instance.WinScreen.SetActive(false);
-        StarterAssets.FirstPersonController.Instance.transform.position = new Vector3(0, 0, 0);
+        GUIBehavior.Instance.resetCount();
+        //StarterAssets.FirstPersonController.Instance.transform.position = new Vector3(0, 0, 0);
 
 
 
 
     }
-    private void UIOff()
+    public void UIOff()
     {
         GUIBehavior.Instance.UI.SetActive(false);
         GUIBehavior.Instance.PHB.SetActive(false);

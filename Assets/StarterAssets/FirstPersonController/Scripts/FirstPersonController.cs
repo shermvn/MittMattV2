@@ -238,10 +238,12 @@ namespace StarterAssets
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
-				}
+                    AudioManager.Instance.PlaySound(AudioManager.Instance.JumpHit, 0.2f);
 
-				// jump timeout
-				if (_jumpTimeoutDelta >= 0.0f)
+                }
+
+                // jump timeout
+                if (_jumpTimeoutDelta >= 0.0f)
 				{
 					_jumpTimeoutDelta -= Time.deltaTime;
 				}

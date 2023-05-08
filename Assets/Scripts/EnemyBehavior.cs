@@ -117,6 +117,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             //Attack code
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            AudioManager.Instance.PlaySound(AudioManager.Instance.EnShootHit, 0.2f);
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 1f, ForceMode.Impulse);
 

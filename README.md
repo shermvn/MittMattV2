@@ -1,4 +1,21 @@
 # MittMattV2
+## 05082023 Current Deliverable
+### What I have?
+One Map
+## 05082023 13 hour sretch
+- Enemy spawning
+- floor spawning
+- i opened my project and had to convert evrything to HDRP
+- audio Implementation
+- Power ups
+    - animation and spawning
+    - usage
+- spent half of the time trying to troubleshoot
+    - how to bake navmesh surface during load after the spawn if the floor/tiles
+    - Since i used Unity's FPS contoller, i currently can't figure out how to reset the posistion of my character
+- he# alth bars
+- UI
+## skipped a couple days
 ## 04292023 6 hours
 - got sizing of tiles right
 - made coin

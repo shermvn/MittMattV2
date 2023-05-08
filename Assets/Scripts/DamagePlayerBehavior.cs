@@ -26,7 +26,7 @@ public class DamagePlayerBehavior : MonoBehaviour
         if (collision.gameObject.CompareTag("EnBullet"))
         {
             Debug.Log("Enbullet");
-            PlayerBehavior.Instance.TakeDamage(20);
+            PlayerBehavior.Instance.TakeDamage(Damage);
             }
         //if (collision.gameObject.CompareTag("EnBullet"))
         //{

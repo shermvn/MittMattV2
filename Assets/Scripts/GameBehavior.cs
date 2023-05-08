@@ -139,7 +139,9 @@ public class GameBehavior : MonoBehaviour
             case State.GameOver:
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
-                    TitleSeq();
+                    //    TitleSeq();
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
                     //Player.Instance.ResetPlayer();
                     //GuiBehavior.Instance.ToggleGUIVisibility(GuiBehavior.Instance.ScoreGui);
                     //GuiBehavior.Instance.ToggleHealthVisibility(GuiBehavior.Instance.Health);

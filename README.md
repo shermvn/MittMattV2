@@ -1,7 +1,22 @@
 # MittMattV2
 ## 05082023 Current Deliverable
 ### What I have?
-One Map
+- One Map
+- start screen and gameplay
+- Use of VFX grpah
+- implemented sound
+- two powerups
+- NavMesh Enemies
+- an Objective
+### What is missing?
+- Info screen/ credits
+    -  for pizza and font
+- Consistent Gameplay
+- more in depth audio
+- post processing
+- Random Map generation
+- shader based shooting effects
+- Stylised characters
 ## 05082023 13 hour sretch
 - Enemy spawning
 - floor spawning
@@ -13,7 +28,7 @@ One Map
 - spent half of the time trying to troubleshoot
     - how to bake navmesh surface during load after the spawn if the floor/tiles
     - Since i used Unity's FPS contoller, i currently can't figure out how to reset the posistion of my character
-- he# alth bars
+- health bars
 - UI
 ## skipped a couple days
 ## 04292023 6 hours

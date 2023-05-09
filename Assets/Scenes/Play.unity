@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 6606.5747, g: 6605.1367, b: 6605.1367, a: 1}
+  m_IndirectSpecularColor: {r: 6496.8975, g: 6541.7446, b: 6625.91, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -571,7 +571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3977285094344333306, guid: 254dbd15cb1054902888e2b545f49418, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4311687210141219795, guid: 254dbd15cb1054902888e2b545f49418, type: 3}
       propertyPath: player
@@ -1699,7 +1699,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.99, y: 1.77, z: 1.16}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &460616845
 MeshRenderer:
@@ -3208,6 +3208,10 @@ PrefabInstance:
     - target: {fileID: 1605792564429072826, guid: 7f6ce0ecf2293491892be07f1b4525d3, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605792564429072826, guid: 7f6ce0ecf2293491892be07f1b4525d3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f6ce0ecf2293491892be07f1b4525d3, type: 3}
@@ -7570,6 +7574,10 @@ PrefabInstance:
     - target: {fileID: 1605792564429072826, guid: 7f6ce0ecf2293491892be07f1b4525d3, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605792564429072826, guid: 7f6ce0ecf2293491892be07f1b4525d3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f6ce0ecf2293491892be07f1b4525d3, type: 3}

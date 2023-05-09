@@ -6,7 +6,7 @@ using TMPro;
 public class PowerUpBehavior : MonoBehaviour
 {
     private static PowerUpBehavior Instance;
-    
+
 
     //private void Awake()
     //{
@@ -22,6 +22,7 @@ public class PowerUpBehavior : MonoBehaviour
     //    }
 
     //}
+
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(" gone");

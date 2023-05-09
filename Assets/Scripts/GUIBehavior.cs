@@ -35,7 +35,7 @@ public class GUIBehavior : MonoBehaviour
     }
 
 
-        private void Start()
+    private void Start()
     {
         // Deactivate the game object at the start of the scene
         GameOverScreen.SetActive(false);

@@ -7,6 +7,7 @@
 - implemented sound
 - two powerups
 - NavMesh Enemies
+    - Taken out for playablitly
 - an Objective
 ### What is missing?
 - Info screen/ credits

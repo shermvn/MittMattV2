@@ -122,10 +122,11 @@ public class GameBehavior : MonoBehaviour
                     //Player.Instance.enabled = true;
                     //Time.timeScale = 1f;
                     //AudioBehavior.Instance.Soundtrack.Play();
-                    TitleSeq();
                     //GUIBehavior.Instance.GoState(GUIBehavior.Instance.PauseScreen);
                     //GuiBehavior.Instance.ToggleGUIVisibility(GuiBehavior.Instance.OverGui);
                     //CurrentState = State.Play;
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
                 }
                 if (Input.GetKeyDown(KeyCode.Q))
                 {

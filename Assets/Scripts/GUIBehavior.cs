@@ -11,6 +11,9 @@ public class GUIBehavior : MonoBehaviour
     [SerializeField] public GameObject PHB;
     [SerializeField] public GameObject Time;
     [SerializeField] public GameObject WinScreen;
+    [SerializeField] public GameObject TitleScreen;
+
+
     public int PizzaCount;
     public int CoinCount;
 

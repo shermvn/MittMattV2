@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealthBehavior : MonoBehaviour
 {
     public static PlayerHealthBehavior Instance;
-    [SerializeField] public Image _healthBarSprites;
+    [SerializeField] public Image _healthBarPSprites;
     private Camera _cam;
     // Start is called before the first frame update
 
@@ -25,7 +25,7 @@ public class PlayerHealthBehavior : MonoBehaviour
     }
     void Start()
     {
-        _cam = Camera.main;
+        //_cam = Camera.main;
     }
 
     // Update is called once per frame
@@ -36,7 +36,7 @@ public class PlayerHealthBehavior : MonoBehaviour
 
     public void updateHealthBar(float maxHealth, float currentHealth)
     {
-        _healthBarSprites.fillAmount = (currentHealth / maxHealth);
+        _healthBarPSprites.fillAmount = (currentHealth / maxHealth);
         Debug.Log(currentHealth / maxHealth);
         Debug.Log(maxHealth);
         Debug.Log(currentHealth);

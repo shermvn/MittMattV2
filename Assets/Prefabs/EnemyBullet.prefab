@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3027074926812109453}
   - component: {fileID: 5981345615959516263}
   - component: {fileID: 3796190840201590803}
-  - component: {fileID: 3852673931701168126}
   - component: {fileID: 7210717764757806167}
   m_Layer: 0
   m_Name: EnemyBullet
@@ -222,19 +221,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &3852673931701168126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4842712556854126893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baf1a2f09d45f4daa86478d1ba6c3b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 20
 --- !u!54 &7210717764757806167
 Rigidbody:
   m_ObjectHideFlags: 0

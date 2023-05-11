@@ -108,7 +108,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870538533713964906}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0dea29d88d5d04590b1725d19e3fab30, type: 2}
   m_CullingMode: 0
@@ -127,7 +127,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870538533713964906}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: bbb15dd7c251e4c8ca69b155ae526b36, type: 2}
   m_Animations: []
@@ -147,5 +147,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948b2babc80554174a073d24cf6f0211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PizzaCount: 0
-  CoinCount: 0

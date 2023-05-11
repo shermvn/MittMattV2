@@ -8,24 +8,24 @@ public class FaderBehavior : MonoBehaviour
     private void Awake()
     {
 
-        // Singleton pattern
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
+        //// Singleton pattern
+        //if (Instance != null && Instance != this)
+        //{
+        //    Destroy(this);
+        //}
+        //else
+        //{
+        //    Instance = this;
+        //}
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("fader");
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("fader");
-            PlayerBehavior.Instance.TakeDamage(40);
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Debug.Log("fader");
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        Debug.Log("fader");
+    //        PlayerBehavior.Instance.TakeDamage(40);
+    //    }
+    //}
 }

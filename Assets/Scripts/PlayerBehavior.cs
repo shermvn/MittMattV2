@@ -83,11 +83,16 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
-    public void Fell()
+    private void OnCollisionEnter(Collision collision)
     {
-   
+        Debug.Log("fader");
+        if (collision.gameObject.CompareTag("Fader"))
+        {
+            Debug.Log("fader");
+            TakeDamage(40);
+        }
+      
     }
-   
 }   
 
 

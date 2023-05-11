@@ -1,15 +1,24 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DamageEnemyBehavior : MonoBehaviour
 {
     [SerializeField] public int Damage = 20;
+    [SerializeField] EnemyBehavior _enemyBehavior;
+
+    void Start()
+    {
+        _enemyBehavior = GetComponent<EnemyBehavior>();
+
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("bullet");
-            EnemyBehavior.Instance.TakeDamage(Damage);
+            //EnemyBehavior.Instance.TakeDamage(Damage);
+            _enemyBehavior.TakeDamage(Damage);
 
             //            EnemyBehavior.Instance.TakeDamage(Damage);
             //    EnemyBehavior enemyBehavior = collision.gameObject.GetComponent<EnemyBehavior>();

@@ -24,6 +24,16 @@ public class WeaponBehavior : MonoBehaviour
             FireWeapon();
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("fader");
+        if (collision.gameObject.CompareTag("Fader"))
+        {
+            Debug.Log("fader");
+            PlayerBehavior.Instance.TakeDamage(40);
+        }
+
+    }
     private void FireWeapon()
     {
         //instantiate bullet

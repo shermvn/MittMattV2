@@ -34,7 +34,11 @@ public class PlayerBehavior : MonoBehaviour
     }
 
     private void Update()
-    { 
+    {
+        Debug.Log("PizzaCount= " + GUIBehavior.Instance.PizzaCount);
+        Debug.Log("CoinCount= " + GUIBehavior.Instance.CoinCount);
+
+
         if (count == 0 && transform.position.y <= -15)
         {
             Debug.Log("fell");
@@ -42,6 +46,7 @@ public class PlayerBehavior : MonoBehaviour
             count++;
         }
         if(GUIBehavior.Instance.CoinCount >= 3 && Input.GetKeyDown(KeyCode.C)){
+            Debug.Log("C");
             TimerBehavior.Instance.timeValue += 20;
             GUIBehavior.Instance.CoinCount -= 3;
             AudioManager.Instance.PlaySound(AudioManager.Instance.TimeHit, 0.2f);
@@ -49,6 +54,8 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (GUIBehavior.Instance.PizzaCount >= 1 && Input.GetKeyDown(KeyCode.Z))
         {
+            Debug.Log("Z");
+
             _currentPHealth = 20;
             GUIBehavior.Instance.PizzaCount -= 1;
             AudioManager.Instance.PlaySound(AudioManager.Instance.HealHit, 0.2f);

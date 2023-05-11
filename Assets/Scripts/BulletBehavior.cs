@@ -18,7 +18,7 @@ public class BulletBehavior : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && this.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Enemy") && this.gameObject.CompareTag("Player"))
         {
             print("hit " + collision.gameObject.name + " !");
             Destroy(gameObject);

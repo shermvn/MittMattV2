@@ -17,9 +17,6 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject projectile;
 
 
-    public static EnemyBehavior Instance;
-
-
     public LayerMask whatIsGround, whatIsPlayer;
 
     //Patroling
@@ -115,11 +112,13 @@ public class EnemyBehavior : MonoBehaviour
 
         if (!alreadyAttacked)
         {
+
+            Vector3 shootDestination = player.position - this.transform.position;
             //Attack code
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             AudioManager.Instance.PlaySound(AudioManager.Instance.EnShootHit, 0.2f);
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 1f, ForceMode.Impulse);
+            rb.AddForce(shootDestination / 5, ForceMode.Impulse);
+            //rb.AddForce(transform.up * 1f, ForceMode.Impulse);
 
 
 

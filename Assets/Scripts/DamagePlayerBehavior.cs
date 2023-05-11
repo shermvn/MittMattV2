@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamagePlayerBehavior : MonoBehaviour
 {
-    public static DamagePlayerBehavior Instance;
+    //public static DamagePlayerBehavior Instance;
     [SerializeField] public int Damage = 20;
     [SerializeField] PlayerBehavior _playerBehavior;
 
@@ -29,13 +29,14 @@ public class DamagePlayerBehavior : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("EnBullet"))
-        {
-            Debug.Log("Enbullet");
-            //PlayerBehavior.Instance.TakeDamage(Damage);
-            _playerBehavior.TakeDamage(Damage);
+        ////Debug.Log(collision.gameObject.name);
+        //if (collision.gameObject.CompareTag("EnBullet"))
+        //{
+        //    //Debug.Log("Enbullet");
+        //    //PlayerBehavior.Instance.TakeDamage(Damage);
+        //    _playerBehavior.TakeDamage(Damage);
 
-        }
+        //}
         //if (collision.gameObject.CompareTag("EnBullet"))
         //{
         //    Debug.Log("enbullet");

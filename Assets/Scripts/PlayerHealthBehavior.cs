@@ -38,8 +38,8 @@ public class PlayerHealthBehavior : MonoBehaviour
     {
         _healthBarPSprites.fillAmount = (currentHealth / maxHealth);
         Debug.Log(currentHealth / maxHealth);
-        Debug.Log(maxHealth);
-        Debug.Log(currentHealth);
+        //Debug.Log(maxHealth);
+        //Debug.Log(currentHealth);
 
 
         //Debug.Log(_healthBarSprites.fillAmount);

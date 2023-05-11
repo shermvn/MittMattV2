@@ -9,6 +9,8 @@ public class PlayerBehavior : MonoBehaviour
     private float _currentPHealth;
     private float maxPHealth = 100;
     private float count = 0;
+    [SerializeField] public int Damage = 20;
+   // [SerializeField] PlayerBehavior _playerBehavior;
 
 
 
@@ -26,10 +28,12 @@ public class PlayerBehavior : MonoBehaviour
             Instance = this;
         }
         // Assuming you are accessing the object's position using transform
-        
     }
+
     private void Start()
     {
+       // _playerBehavior = GetComponent<PlayerBehavior>();
+
         _currentPHealth = maxPHealth;
     }
 
@@ -66,7 +70,6 @@ public class PlayerBehavior : MonoBehaviour
     public void PlayerReset()
     {
         count = 0;
-
     }
 
    public void TakeDamage(int damage)
@@ -85,13 +88,21 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("fader");
+        
         if (collision.gameObject.CompareTag("Fader"))
         {
             Debug.Log("fader");
             TakeDamage(40);
         }
-      
+
+        if (collision.gameObject.CompareTag("EnBullet"))
+        {
+            Debug.Log("Enbullet");
+            //PlayerBehavior.Instance.TakeDamage(Damage);
+            TakeDamage(Damage);
+
+        }
+
     }
 }   
 

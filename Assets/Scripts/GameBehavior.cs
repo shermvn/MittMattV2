@@ -43,6 +43,7 @@ public class GameBehavior : MonoBehaviour
         //GuiBehavior.Instance.ToggleHealthVisibility(GuiBehavior.Instance.Health);
         //Time.timeScale = 0f;
         CurrentState = State.Title;
+        TitleSeq();
 
     }
     public void GameOverReset()
@@ -67,9 +68,7 @@ public class GameBehavior : MonoBehaviour
                 //GUIBehavior.Instance.GameOverScreen.SetActive(false);
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
-
-                    PlaySeq();
-                    
+                    PlaySeq();   
                     Debug.Log(CurrentState);
                     //Time.timeScale = 1f;
                     //GuiBehavior.Instance.ToggleGUIVisibility(GuiBehavior.Instance.OverGui);
@@ -151,6 +150,8 @@ public class GameBehavior : MonoBehaviour
                 }
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
                     //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + -1);
                     //GuiBehavior.Instance.UpdateMessageGUI("Game Over");
                     //GuiBehavior.Instance.ToggleGUIVisibility(GuiBehavior.Instance.OverGui);
@@ -190,6 +191,8 @@ public class GameBehavior : MonoBehaviour
         UIOff();
         CurrentState = State.GameOver;
         AudioManager.Instance.PlaySound(AudioManager.Instance.DeathHit, 0.2f);
+        GUIBehavior.Instance.TitleScreen.SetActive(false);
+
 
         AudioManager.Instance.Soundtrack.Stop();
         PlayerBehavior.Instance.PlayerReset();
@@ -218,6 +221,8 @@ public class GameBehavior : MonoBehaviour
         GUIBehavior.Instance.UI.SetActive(true);
         GUIBehavior.Instance.PHB.SetActive(true);
         GUIBehavior.Instance.WinScreen.SetActive(false);
+        GUIBehavior.Instance.TitleScreen.SetActive(false);
+
 
 
     }
@@ -226,6 +231,7 @@ public class GameBehavior : MonoBehaviour
         CurrentState = State.Title;
         Time.timeScale = 0f;
         Debug.Log(CurrentState);
+        GUIBehavior.Instance.TitleScreen.SetActive(true);
         //PlayerBehavior.Instance.PlayerReset();
         GUIBehavior.Instance.GameOverScreen.SetActive(false);
         GUIBehavior.Instance.WinScreen.SetActive(false);

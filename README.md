@@ -1,4 +1,7 @@
 # MittMattV2
+## 05112023
+# build
+- still some bugs but finally got it to build after deleting urp assests
 ## 05082023 Current Deliverable
 ### What I have?
 - One Map

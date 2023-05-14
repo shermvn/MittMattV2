@@ -1,10 +1,4 @@
 # MittMattV2
-<<<<<<< Updated upstream
-=======
-## 05112023
-# [Build](https://drive.google.com/file/d/18Umi61GkDaUuBCqr5Ga1ZoaHeIjG3L3x/view?usp=share_link)
-- still some bugs but finally got it to build after deleting urp assests
->>>>>>> Stashed changes
 ## 05082023 Current Deliverable
 ### What I have?
 - One Map

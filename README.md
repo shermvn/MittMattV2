@@ -1,4 +1,11 @@
 # MittMattV2
+# [Build](https://drive.google.com/file/d/18Umi61GkDaUuBCqr5Ga1ZoaHeIjG3L3x/view?usp=share_link)
+- Bugs
+    - pizza not working
+    - if enemy is above it still shoots
+    - you can jump on the knob
+    - enemies get stuck in corner
+
 ## 05082023 Current Deliverable
 ### What I have?
 - One Map
